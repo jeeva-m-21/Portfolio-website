@@ -1,118 +1,135 @@
-# OpenCode Engineering Framework
+# Jeeva M — Portfolio
 
-A reusable, opinionated engineering platform for AI-first full-stack projects. Drop these files into any project to get a complete agent hierarchy, workflow pipeline, knowledge system, execution contract system, and platform standards — all powered by OpenCode.
+**Systems engineer building AI-native platforms for research, embedded systems, and legal intelligence.**
 
-## Quick Start (Use in Any Project)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)](https://www.typescriptlang.org)
+[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://docker.com)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+---
+
+## Overview
+
+A living engineering platform that demonstrates systems thinking through architecture, decisions, and craft. Built as a premium software product — not a template portfolio.
+
+**Live:** [jeeva-m.vercel.app](https://jeeva-m.vercel.app)
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS + Design Tokens |
+| Animation | CSS + Framer Motion |
+| Content | MDX |
+| Icons | Lucide React |
+| Fonts | Inter + JetBrains Mono |
+| Deployment | Docker / Vercel |
+
+---
+
+## Quick Start
 
 ```bash
-# Clone the framework configs into your project
-git clone https://github.com/jeeva-m-21/opencode-configs.git /tmp/opencode-configs
-cp -r /tmp/opencode-configs/{AGENTS.md,opencode.jsonc,tui.jsonc,.opencode,state,prompts,docs} your-project/
-cd your-project
+# Install
+npm install
 
-# Customize for your project
-# 1. Edit opencode.jsonc → update model/provider if needed
-# 2. Edit AGENTS.md → update project-specific conventions
-# 3. Delete state/contract.md content (framework will regenerate)
+# Development
+npm run dev
 
-# Start OpenCode
-opencode
+# Build
+npm run build
 
-# Generate context and begin
-/generate-context
-"Describe what you want to build"
+# Production
+npm start
+
+# Docker
+docker build -t portfolio .
+docker run -p 3000:3000 portfolio
+
+# Docker Compose
+docker-compose up -d
 ```
 
-## What You Get
+---
 
-| Component | Count | Description |
-|---|---|---|
-| **Agents** | 6 | Orchestrator, Analyst, Builder, Reviewer, Docs-writer, Security-auditor |
-| **Commands** | 9 | `/analyze`, `/plan-feature`, `/build-feature`, `/review-feature`, `/test-feature`, `/commit-feature`, `/fix-bug`, `/generate-context`, `/release` |
-| **Skills** | 25 | 19 knowledge modules (`eng-*`) + 6 workflow skills |
-| **Tools** | 3 | `state-reader`, `repo-analyzer`, `env-validator` |
-| **Plugins** | 3 | `state-manager`, `policy-enforcer`, `context-optimizer` |
-| **Standards docs** | 2 | Platform Specification + Engineering Handbook (always loaded in agent context) |
+## Features
 
-## How It Works
+- **System Inspector** — Three-panel layout for project detail pages (Navigator | Content | Inspector)
+- **Command Palette** — Cmd+K universal search across all content
+- **Architecture Explorer** — Interactive DDD + Hexagonal architecture diagrams
+- **Decision Cards** — Context, alternatives, trade-offs for every architectural choice
+- **Ambient Starfield** — 400-star parallax background with gravitational lensing
+- **Dark Mode** — Default with smooth light mode transition
+- **Design Token System** — All visual values from CSS custom properties
+- **Gradual Activation** — Content sections activate as evidence becomes available
+- **Platform State Dashboard** — Self-documenting page at `/state`
 
-```
-You: "Add user authentication with JWT"
-  │
-  ▼
-Orchestrator → classifies as "feature" → loads workflow-selector skill
-  │
-  ▼
-/plan-feature → minimal Analyst exploration → produces execution contract
-  │
-  ▼
-state/contract.md ← THE single source of truth
-  │
-  ├──► /build-feature → Builder consumes contract (no re-exploration)
-  ├──► /review-feature → Reviewer validates against contract
-  ├──► /test-feature → Builder verifies acceptance criteria
-  └──► /commit-feature → Builder commits with contract reference
-```
+---
 
-## Platform Standards (Always Enforced)
+## Pages
 
-- **Stack:** TypeScript strict / Bun / React 18+ / Hono or Express / PostgreSQL 16+ / Drizzle ORM / Redis / Zod / JWT / Vitest / Docker / GitHub Actions
-- **Architecture:** `src/api/` (routes → services → repositories), `src/web/` (pages → components), `src/shared/` (types, validation)
-- **API:** REST with JSON envelopes, auth-gated by default
-- **Auth:** JWT access tokens (15min) + rotating refresh tokens (7 days) + RBAC
-- **Testing:** 90%+ branch coverage on services, all route response codes tested
-- **CI/CD:** GitHub Actions from commit to production
+| Route | Page |
+|---|---|
+| `/` | Home — hero, featured work, experience, research, philosophy |
+| `/projects` | Projects index with filtering |
+| `/projects/researchos` | ResearchOS — DDD + Hexagonal Architecture |
+| `/projects/forgemcu-studio` | ForgeMCU Studio — Multi-agent firmware generation |
+| `/projects/zevaras` | Zevaras Legal AI — Production RAG platform |
+| `/projects/leaf-segmentation` | Leaf Segmentation — YOLOv8 edge AI |
+| `/research` | Neuromorphic intrusion detection research |
+| `/experience` | Professional timeline — IISc, HCLTech, Zevaras |
+| `/about` | Engineering philosophy and focus areas |
+| `/contact` | Email, GitHub, LinkedIn, location |
+| `/state` | Platform state — version history, content maturity |
 
-Full spec: `docs/platform-specification.md`
+---
 
-## Execution Contract System
-
-Every task produces a structured contract (`state/contract.md`) that eliminates repeated reasoning:
-
-- Builder never re-explores (contract specifies files + line ranges + pattern reference)
-- Reviewer never re-interprets (contract IS the requirements)
-- Knowledge modules loaded deterministically (contract specifies which ones)
-
-## Customizing for Your Project
-
-1. **Provider/Model**: Edit `opencode.jsonc` → `model` and `provider` fields
-2. **Project conventions**: Edit `AGENTS.md` → add project-specific rules at the bottom
-3. **Tech stack**: Edit `docs/platform-specification.md` if you use a different stack
-4. **Permissions**: Edit `opencode.jsonc` → `permission` section for stricter/looser controls
-5. **MCP servers**: Add under `mcp` in `opencode.jsonc`, opt-in per agent under `tools`
-
-## Directory Structure
+## Project Structure
 
 ```
-project-root/
-├── AGENTS.md                    ← Framework instructions + project rules
-├── opencode.jsonc               ← Agents, permissions, MCP, model config
-├── tui.jsonc                    ← Terminal UI preferences
-├── .opencode/
-│   ├── agents/                  ← 6 agent definitions (markdown)
-│   ├── commands/                ← 9 workflow commands
-│   ├── skills/                  ← 25 skills (19 knowledge + 6 workflow)
-│   ├── tools/                   ← 3 custom TypeScript tools
-│   └── plugins/                 ← 3 event hook plugins
-├── prompts/                     ← Agent system prompt files
-├── state/                       ← Workflow state (contract.md is source of truth)
-│   ├── contract.md
-│   ├── phase.json
-│   ├── decisions.md
-│   └── cache/
-└── docs/                        ← Platform spec + handbook
+src/
+├── app/              # Next.js App Router pages
+│   ├── projects/     # Project index + [slug] detail
+│   ├── research/     # Research page
+│   ├── experience/   # Experience timeline
+│   ├── about/        # About + philosophy
+│   ├── contact/      # Contact page
+│   └── state/        # Platform state dashboard
+├── components/
+│   ├── ui/           # Atoms (Button, Badge, Tag, Callout, etc.)
+│   ├── features/     # Molecules + Organisms (CommandPalette, DecisionCard, etc.)
+│   └── layout/       # Layout (Navbar, Footer, Container, Grid)
+├── lib/              # Data, search index, events, utilities
+├── styles/           # Global CSS + design tokens
+└── types/            # TypeScript type definitions
 ```
 
-## Design Principles
+---
 
-1. **OpenCode native first** — Uses OpenCode's built-in extension points. No wrappers.
-2. **Convention over configuration** — Sensible defaults. Exceptions are explicit.
-3. **Filesystem state** — State lives in `state/` directory. No database. No services.
-4. **Model-cost awareness** — Premium for orchestrator/builder, cheap for analyst/reviewer.
-5. **Least privilege** — Agents get only the permissions they need.
-6. **The contract is the standard** — Created once, consumed by all downstream agents.
-7. **Knowledge is centralized** — Engineering standards in `eng-*` skills, not scattered in prompts.
+## Design System
+
+- **Typography:** Inter (primary) + JetBrains Mono (code)
+- **Color:** Dark mode default. Single accent blue (#3b82f6). No green/red/yellow.
+- **Spacing:** 4px base unit. 14-step scale.
+- **Shape:** 0/4/8/12px radii. Flat. Shadow-averse.
+- **Motion:** 150-300ms. Ease-out. Transform + opacity only. Reduced motion respected.
+
+---
+
+## Contact
+
+- **Email:** jeeva4772@gmail.com
+- **GitHub:** [github.com/jeeva-m-21](https://github.com/jeeva-m-21)
+- **LinkedIn:** [linkedin.com/in/jeeva4772](https://www.linkedin.com/in/jeeva4772/)
+- **Location:** Chennai, Tamil Nadu, India
+
+---
 
 ## License
 
-MIT — use freely in any project.
+MIT
