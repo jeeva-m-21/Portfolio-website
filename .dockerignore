@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.opencode
+state
+docs
+prompts
+*.md
+.env
+.env.local
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
