@@ -9,8 +9,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-wide flex-col gap-6 px-8 py-12 sm:flex-row sm:items-start sm:justify-between sm:px-16 lg:px-24">
         <div>
           <p className="text-sm font-semibold tracking-tight text-text-primary">Portfolio</p>
-          <p className="mt-1 font-mono text-[11px] text-text-disabled">v1.0.0</p>
-          <p className="mt-4 text-xs text-text-tertiary">&copy; {year}</p>
+                    <p className="mt-4 text-xs text-text-tertiary">&copy; {year}</p>
         </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
           <div>

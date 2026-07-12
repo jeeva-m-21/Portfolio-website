@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Command } from 'lucide-react';
+import { Menu, Command, Sun, Moon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { emit, Events } from '@/lib/events';
 
@@ -18,6 +18,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [isLight, setIsLight] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,6 +39,11 @@ export function Navbar() {
     pathname === href || (href !== '/' && pathname.startsWith(href + '/'));
 
   const openCommandPalette = () => emit(Events.COMMAND_PALETTE_OPEN);
+
+  const toggleTheme = () => {
+    setIsLight(!isLight);
+    document.documentElement.classList.toggle("light");
+  };
 
   return (
     <header
