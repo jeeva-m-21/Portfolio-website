@@ -72,7 +72,7 @@ export function AmbientTopology() {
       const my = mouseRef.current.y;
 
       /* Subtle grid — architectural blueprint feel */
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.012)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
       ctx.lineWidth = 0.5;
       const gridSize = 80;
       for (let x = gridSize; x < canvas.width; x += gridSize) {
@@ -102,7 +102,7 @@ export function AmbientTopology() {
           const dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < CONNECTION_DISTANCE) {
-            const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.025;
+            const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.04;
             ctx.strokeStyle = `rgba(161, 161, 170, ${alpha})`;
             ctx.lineWidth = 0.3;
             ctx.beginPath();
@@ -115,16 +115,16 @@ export function AmbientTopology() {
 
       /* Draw nodes */
       for (const node of nodes) {
-        let baseOpacity = node.type === 'active' ? 0.06 : node.type === 'idle' ? 0.03 : 0.015;
+        let baseOpacity = node.type === 'active' ? 0.10 : node.type === 'idle' ? 0.05 : 0.025;
         let opacity = baseOpacity * (0.5 + 0.5 * Math.sin(node.pulsePhase));
 
         const mdx = node.x - mx;
         const mdy = node.y - my;
         const mouseDist = Math.sqrt(mdx * mdx + mdy * mdy);
         if (mouseDist < 150) {
-          opacity += 0.06 * (1 - mouseDist / 150);
+          opacity += 0.10 * (1 - mouseDist / 150);
         }
-        opacity = Math.min(opacity, 0.12);
+        opacity = Math.min(opacity, 0.20);
 
         if (opacity < 0.003) continue;
 
