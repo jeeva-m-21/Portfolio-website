@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      <section className="px-8 pb-16 pt-20 sm:px-16 lg:px-24 lg:pt-24">
+      <section className="px-6 pb-12 pt-20 sm:px-16 lg:px-24 lg:pt-24">
         <p className="font-mono text-sm tracking-widest text-accent">CONTACT</p>
         <h1 className="mt-8 max-w-4xl text-6xl font-semibold leading-none tracking-tight text-text-primary sm:text-7xl">
           Let us build
@@ -24,7 +24,7 @@ export default function ContactPage() {
       </section>
 
       <section className="border-t border-border-secondary/50 px-8 py-16 sm:px-16 lg:px-24">
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           {/* Email */}
           <div className="rounded-xl border border-border-secondary bg-bg-secondary p-8">
             <p className="font-mono text-[10px] uppercase tracking-widest text-text-tertiary">Primary</p>

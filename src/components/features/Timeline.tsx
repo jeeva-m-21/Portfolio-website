@@ -20,7 +20,7 @@ export function Timeline({ entries, className }: TimelineProps) {
       {/* Vertical line */}
       <div className="absolute bottom-0 left-[7px] top-2 w-px bg-border-primary" />
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {entries.map((entry) => (
           <div key={entry.id} className="relative flex gap-4">
             {/* Dot */}
@@ -28,7 +28,7 @@ export function Timeline({ entries, className }: TimelineProps) {
 
             {/* Content */}
             <div className="min-w-0 flex-1">
-              <div className="flex items-baseline justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
                 <h3 className="text-base font-medium text-text-primary">
                   {entry.title}
                 </h3>

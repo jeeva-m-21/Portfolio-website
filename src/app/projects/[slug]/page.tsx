@@ -53,13 +53,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         <main className="min-w-0 flex-1">
           {/* Overview */}
-          <section id="overview" className="px-6 pb-12 pt-20 sm:px-12 lg:px-16 lg:pb-16 lg:pt-24">
+          <section id="overview" className="px-4 pb-10 pt-20 sm:px-12 lg:px-16 lg:pb-16 lg:pt-24">
             <div className="flex items-center gap-3">
               <StatusBadge status={project.status} />
               <span className="font-mono text-xs text-text-tertiary">Started {project.startedAt} &middot; Updated {project.updatedAt}</span>
             </div>
-            <h1 className="mt-6 text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">{project.title}</h1>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-secondary">{project.description}</p>
+            <h1 className="mt-6 text-3xl font-semibold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">{project.title}</h1>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed sm:text-lg text-text-secondary">{project.description}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {project.links?.github && <ExternalLink href={project.links.github}>View on GitHub</ExternalLink>}
               {project.links?.demo && <ExternalLink href={project.links.demo}>Live Demo</ExternalLink>}
@@ -67,7 +67,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </section>
 
           {/* Architecture — the star of the page */}
-          <section id="architecture" className="border-t border-border-secondary/50 px-6 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <section id="architecture" className="border-t border-border-secondary/50 px-4 py-10 sm:px-12 lg:px-16 lg:py-16">
             <p className="font-mono text-xs tracking-widest text-text-tertiary">ARCHITECTURE</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-text-primary">System Design</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-text-secondary">
@@ -84,7 +84,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </section>
 
           {/* How It Works — decisions as supporting evidence */}
-          <section id="thinking" className="border-t border-border-secondary/50 px-6 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <section id="thinking" className="border-t border-border-secondary/50 px-4 py-10 sm:px-12 lg:px-16 lg:py-16">
             <p className="font-mono text-xs tracking-widest text-text-tertiary">HOW IT WORKS</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-text-primary">The thinking behind the system</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-text-secondary">
@@ -103,7 +103,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </section>
 
           {/* Evolution — lessons learned */}
-          <section id="evolution" className="border-t border-border-secondary/50 px-6 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <section id="evolution" className="border-t border-border-secondary/50 px-4 py-10 sm:px-12 lg:px-16 lg:py-16">
             <p className="font-mono text-xs tracking-widest text-text-tertiary">EVOLUTION</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-text-primary">How this system grew</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-text-secondary">
@@ -118,7 +118,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </main>
 
         {/* Inspector — system metrics, not ADR counts */}
-        <aside className="border-t border-border-secondary/50 bg-bg-secondary/20 px-6 py-12 sm:px-12 lg:sticky lg:top-14 lg:h-[calc(100vh-3.5rem)] lg:w-72 lg:shrink-0 lg:overflow-y-auto lg:border-l lg:border-t-0 lg:px-6 lg:py-8">
+        <aside className="border-t border-border-secondary/50 bg-bg-secondary/20 px-4 py-10 sm:px-12 lg:sticky lg:top-14 lg:h-[calc(100vh-3.5rem)] lg:w-72 lg:shrink-0 lg:overflow-y-auto lg:border-l lg:border-t-0 lg:px-6 lg:py-8">
           <p className="font-mono text-[10px] uppercase tracking-widest text-text-disabled">System Info</p>
 
           <div className="mt-8 space-y-8">

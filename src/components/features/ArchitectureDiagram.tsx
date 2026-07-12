@@ -69,7 +69,7 @@ export function ArchitectureDiagram() {
             )}
             onClick={() => setActiveLayer(isActive ? null : i)}
           >
-            <div className="flex items-center justify-between px-5 py-4">
+            <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-4">
               <div className="flex items-center gap-3">
                 <span className={cn(
                   'font-mono text-xs transition-colors duration-medium',
@@ -93,7 +93,7 @@ export function ArchitectureDiagram() {
             </div>
 
             {isActive && (
-              <div className="border-t border-border-secondary/50 px-5 pb-5 pt-4" style={{ animation: 'fadeUp 0.25s both' }}>
+              <div className="border-t border-border-secondary/50 px-4 pb-4 pt-3 sm:px-5 sm:pb-5 sm:pt-4" style={{ animation: 'fadeUp 0.25s both' }}>
                 <p className="mb-4 text-sm leading-relaxed text-text-secondary">{layer.description}</p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {layer.components.map((comp) => {

@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero — rewritten with Constitution positioning */}
-      <section className="relative flex min-h-[90vh] items-center px-8 sm:px-16 lg:px-24">
+      <section className="relative flex min-h-[70vh] sm:min-h-[90vh] items-center px-6 sm:px-16 lg:px-24">
         <div className="relative z-10 max-w-4xl">
           <p
             className="font-mono text-sm tracking-widest text-accent"
@@ -30,21 +30,21 @@ export default function HomePage() {
           >
             JEEVA M
           </p>
-          <h1 className="mt-8 text-6xl font-semibold leading-none tracking-tight text-text-primary sm:text-7xl lg:text-8xl">
+          <h1 className="mt-8 text-4xl font-semibold leading-tight tracking-tight text-text-primary sm:text-6xl lg:text-8xl">
             <span style={{ animation: 'fadeUp 0.6s 0.1s both', display: 'block' }}>I build AI-native</span>
             <span style={{ animation: 'fadeUp 0.6s 0.2s both', display: 'block' }}>systems for</span>
             <span className="text-accent" style={{ animation: 'fadeUp 0.6s 0.3s both', display: 'block' }}>research and</span>
             <span className="text-accent" style={{ animation: 'fadeUp 0.6s 0.4s both', display: 'block' }}>operations.</span>
           </h1>
           <p
-            className="mt-10 max-w-2xl text-xl leading-relaxed text-text-secondary"
+            className="mt-8 max-w-2xl text-base leading-relaxed sm:text-xl text-text-secondary"
             style={{ animation: 'fadeUp 0.6s 0.55s both' }}
           >
             Currently designing ResearchOS — an operating system for the
             complete research lifecycle. Previously at IISc, HCLTech, and Zevaras.
           </p>
           <div
-            className="mt-10 flex items-center gap-6"
+            className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6"
             style={{ animation: 'fadeUp 0.6s 0.7s both' }}
           >
             <Link
@@ -72,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Work — SYSTEMS label */}
-      <section className="relative px-8 py-24 sm:px-16 lg:px-24">
+      <section className="relative px-6 py-16 sm:px-16 sm:py-24 lg:px-24">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/10 to-transparent" />
         <div className="mb-16 flex items-end justify-between">
           <div>
@@ -122,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* Philosophy — systems ambition */}
-      <section className="border-t border-border-secondary px-8 py-24 sm:px-16 lg:px-24">
+      <section className="border-t border-border-secondary px-6 py-16 sm:px-16 sm:py-24 lg:px-24">
         <div className="mx-auto max-w-3xl">
           <p className="text-center font-mono text-xs tracking-widest text-text-tertiary">PRINCIPLES</p>
           <h2 className="mt-8 text-center text-5xl font-semibold tracking-tight text-text-primary">

@@ -12,7 +12,7 @@ export function Footer() {
           <p className="mt-1 font-mono text-[11px] text-text-disabled">v1.0.0</p>
           <p className="mt-4 text-xs text-text-tertiary">&copy; {year}</p>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-widest text-text-disabled">Navigate</p>
             <div className="mt-3 space-y-2">
