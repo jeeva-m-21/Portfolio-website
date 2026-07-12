@@ -175,14 +175,17 @@ export function CommandPalette() {
                     <p className="text-sm text-text-tertiary">
                       No results for &ldquo;{query}&rdquo;
                     </p>
-                    <p className="mt-1 text-xs text-text-disabled">
-                      Try a different search term.
-                    </p>
+                    <p className="mt-1 text-xs text-text-disabled">Try a different query.</p>
+                    <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+                      {["architecture", "decisions", "research", "resume", "github"].map((s) => (
+                        <button key={s} onClick={() => { setQuery(s); }} className="rounded border border-border-primary px-2 py-0.5 font-mono text-[10px] text-text-tertiary transition-colors duration-micro hover:border-accent-subtle hover:text-accent">{s}</button>
+                      ))}
+                    </div>
                   </div>
                 ) : grouped.length === 0 ? (
                   <div className="px-4 py-8 text-center">
                     <p className="text-sm text-text-tertiary">
-                      Try: resume, github, researchos, WAL, architecture
+                      Query the system. Try: researchos architecture, hexagonal ddd, hybrid search, resume
                     </p>
                   </div>
                 ) : (

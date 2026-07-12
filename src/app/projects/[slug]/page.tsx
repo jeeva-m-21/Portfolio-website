@@ -160,6 +160,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 {project.technologies.map((tech) => (<Tag key={tech}>{tech}</Tag>))}
               </div>
             </div>
+
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-text-tertiary">Connected to</p>
+              <div className="mt-2 space-y-1.5">
+                {projectDecisions.length > 0 && (
+                  <p className="font-mono text-xs text-text-secondary">&rarr; {projectDecisions.length} design choices</p>
+                )}
+                {otherProjects.slice(0, 2).map((p) => (
+                  <Link key={p!.slug} href={`/projects/${p!.slug}`} className="block font-mono text-xs text-accent transition-colors duration-micro hover:text-accent-hover">
+                    &rarr; {p!.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </aside>
       </div>
