@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <section className="px-6 pb-12 pt-20 sm:px-16 lg:px-24 lg:pt-24">
+      <section className="px-6 pb-12 pt-6 sm:px-16 lg:px-24 lg:pt-24">
         <p className="font-mono text-sm tracking-widest text-accent">JEEVA M</p>
         <h1 className="mt-8 max-w-4xl text-4xl font-semibold leading-tight sm:text-6xl sm:leading-none tracking-tight text-text-primary sm:text-7xl">
           I build platforms,

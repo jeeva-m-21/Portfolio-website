@@ -53,7 +53,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         <main className="min-w-0 flex-1">
           {/* Overview */}
-          <section id="overview" className="px-4 pb-10 pt-20 sm:px-12 lg:px-16 lg:pb-16 lg:pt-24">
+          <section id="overview" className="px-4 pb-10 pt-6 sm:px-12 lg:px-16 lg:pb-16 lg:pt-10">
             <div className="flex items-center gap-3">
               <StatusBadge status={project.status} />
               <span className="font-mono text-xs text-text-tertiary">Started {project.startedAt} &middot; Updated {project.updatedAt}</span>

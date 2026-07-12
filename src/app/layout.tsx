@@ -48,7 +48,7 @@ export default function RootLayout({
         <div className="relative z-10">
           <SkipToContent />
           <Navbar />
-          <main id="main-content">
+          <main id="main-content" className="pt-14">
             {children}
           </main>
           <Footer />

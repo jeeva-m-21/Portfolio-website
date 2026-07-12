@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero — rewritten with Constitution positioning */}
-      <section className="relative flex min-h-[70vh] sm:min-h-[90vh] items-center px-6 sm:px-16 lg:px-24">
+      <section className="relative -mt-14 flex min-h-[70vh] sm:min-h-[90vh] items-center px-6 sm:px-16 lg:px-24">
         <div className="relative z-10 max-w-4xl">
           <p
             className="font-mono text-sm tracking-widest text-accent"
